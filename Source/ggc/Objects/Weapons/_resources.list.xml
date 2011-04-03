@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+  <resource name="Medigun_O" type="RESOURCE"/>
+  <resource name="Rifle_O" type="RESOURCE"/>
+  <resource name="Minegun_O" type="RESOURCE"/>
+  <resource name="Minigun_O" type="RESOURCE"/>
+  <resource name="Flamethrower_O" type="RESOURCE"/>
+  <resource name="Shotgun_O" type="RESOURCE"/>
+  <resource name="Blade" type="RESOURCE"/>
+  <resource name="QRlauncher" type="RESOURCE"/>
+  <resource name="Revolver_O" type="RESOURCE"/>
+  <resource name="GGC" type="GROUP"/>
+</resources>

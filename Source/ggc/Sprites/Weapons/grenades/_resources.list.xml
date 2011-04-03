@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+  <resource name="MedpackS" type="RESOURCE"/>
+  <resource name="MirvcompS" type="RESOURCE"/>
+  <resource name="detpackS" type="RESOURCE"/>
+  <resource name="NapalmgrenS" type="RESOURCE"/>
+  <resource name="NailGrenS" type="RESOURCE"/>
+  <resource name="MirvminiS" type="RESOURCE"/>
+  <resource name="ConcS" type="RESOURCE"/>
+  <resource name="FraggrenS" type="RESOURCE"/>
+  <resource name="GasgrenS" type="RESOURCE"/>
+  <resource name="EmpgrenS" type="RESOURCE"/>
+  <resource name="grenMask" type="RESOURCE"/>
+</resources>

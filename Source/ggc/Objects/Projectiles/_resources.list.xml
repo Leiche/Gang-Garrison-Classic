@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+  <resource name="StabMask" type="RESOURCE"/>
+  <resource name="StabAnim" type="RESOURCE"/>
+  <resource name="AirBlastO" type="RESOURCE"/>
+  <resource name="GGC" type="GROUP"/>
+</resources>

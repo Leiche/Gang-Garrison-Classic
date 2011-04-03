@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<event category="DRAW" id="0">
+  <actions>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">
+    var xoffset, yoffset, xsize, ysize;
+    
+    xoffset = view_xview[0];
+    yoffset = view_yview[0];
+    xsize = view_wview[0];
+    ysize = view_hview[0];
+    
+    draw_set_alpha(1);
+    
+    draw_sprite_ext(sprite_index, 0, (xoffset+xsize)-150, (yoffset+ysize) +100, 3, 3, 0, c_white, 1);
+
+    draw_set_color(c_black);
+    draw_set_valign(fa_middle);
+    draw_set_halign(fa_center);
+
+    //showing the amount of caps, and the amount of caps to win
+    draw_text_transformed(xoffset+xsize/2-60, yoffset+ysize-30, string(global.redCaps),2,2,0);
+    draw_text_transformed(xoffset+xsize/2+60, yoffset+ysize-30, string(global.blueCaps),2,2,0);
+    
+    // this next piece of code helps to resize the value of the numbers depending on the limit as not to overflow
+    if (global.caplimit &lt;= 9)
+    {   
+        draw_text_transformed(xoffset+xsize/2-2, yoffset+ysize-10, string(global.caplimit),2,2,0);
+    }
+    else
+    {
+        if (global.caplimit &gt; 999)
+        {
+            draw_sprite_ext(infinity,0,xoffset+xsize/2-3, yoffset+ysize-17, 2, 2, 0, c_white, 1);
+        }
+        else
+        {
+            draw_text(xoffset+xsize/2-2, yoffset+ysize-15, string(global.caplimit));   
+        }
+    }
+    
+    //Drawing fussball status and arrows:
+    
+    redx=(xoffset+xsize)-445;
+    redy=(yoffset+ysize)-30;
+
+    if global.myself == -1 exit;
+    if global.myself.object==-1{
+        sourcex=redx;    
+        sourcey=redy;
+    }
+    else{
+        sourcex=global.myself.object.x;
+        sourcey=global.myself.object.y;
+    } 
+      
+    
+    if instance_exists(Fussball)
+    {
+        reddir = point_direction(sourcex,sourcey,Fussball.x,Fussball.y);
+        if Fussball.x==FussballBase.x &amp;&amp; Fussball.y==FussballBase.y{
+            fussballstatus=2;
+        }
+        else fussballstatus=0;
+    }
+    else {
+        fussballstatus=1;
+    }
+
+    drawred=true;
+    if global.myself.object!=-1{
+        if global.myself.team==TEAM_RED &amp;&amp; global.myself.object.fussball==true drawblue=false;
+    }
+    
+    draw_sprite_ext(IntelStatusS, fussballstatus, xoffset+xsize/2-2, redy, 2, 2, 0, c_white, 1);
+    
+if instance_exists(WinBanner) exit;
+</argument>
+      </arguments>
+    </action>
+  </actions>
+</event>

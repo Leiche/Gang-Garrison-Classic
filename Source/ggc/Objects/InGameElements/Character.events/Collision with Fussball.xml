@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<event category="COLLISION" with="Fussball">
+  <actions>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">if(global.isHost) {
+    if((not place_meeting(x,y,TeamGate)) &amp;&amp; canGrabFussball == 1 &amp;&amp; ubered == 0) {
+        sendEventGreifenFussball(player);
+        doEventGreifenFussball(player);
+    }
+}
+</argument>
+      </arguments>
+    </action>
+  </actions>
+</event>

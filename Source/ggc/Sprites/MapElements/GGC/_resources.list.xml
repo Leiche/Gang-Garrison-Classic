@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+  <resource name="EscortTargetS" type="RESOURCE"/>
+  <resource filename="EscortTargetS_old" name="EscortTargetS.old" type="RESOURCE"/>
+  <resource name="FussballS" type="RESOURCE"/>
+  <resource name="FußballBaseS" type="RESOURCE"/>
+  <resource name="FußballtorRotS" type="RESOURCE"/>
+  <resource name="FußballtorBlauS" type="RESOURCE"/>
+</resources>

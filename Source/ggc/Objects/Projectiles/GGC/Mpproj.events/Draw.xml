@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<event category="DRAW" id="0">
+  <actions>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">{    
+    draw_set_alpha(1);
+    var index;
+    if random(max(alarm[0]-10,15))&lt;6 then index=team+2 else index=team;  
+        if sticksTo != -1 draw_sprite_ext(sprite_index, index, x, y, image_xscale, image_yscale, 0, c_white, extinguish);
+         else
+         draw_sprite_ext(sprite_index,index,x,y,image_xscale,image_yscale,image_angle,c_white,1);
+}
+</argument>
+      </arguments>
+    </action>
+  </actions>
+</event>

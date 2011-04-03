@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+  <resource name="Medpack" type="RESOURCE"/>
+  <resource name="Mirv" type="RESOURCE"/>
+  <resource name="NapalmGrenade" type="RESOURCE"/>
+  <resource name="ConcussionGrenade" type="RESOURCE"/>
+  <resource name="EmpGrenade" type="RESOURCE"/>
+  <resource name="FragGrenade" type="RESOURCE"/>
+  <resource name="NailGrenade" type="RESOURCE"/>
+  <resource name="GasGrenade" type="RESOURCE"/>
+  <resource name="Mirvmini" type="RESOURCE"/>
+  <resource name="Grenade" type="RESOURCE"/>
+  <resource name="CharacterGrenade" type="RESOURCE"/>
+</resources>

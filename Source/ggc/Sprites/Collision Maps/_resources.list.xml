@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+  <resource name="TwodFortTwoS" type="RESOURCE"/>
+  <resource name="cfortS" type="RESOURCE"/>
+  <resource name="TruefortS" type="RESOURCE"/>
+  <resource name="FrontaldangerS" type="RESOURCE"/>
+  <resource name="BadlandsS" type="RESOURCE"/>
+  <resource name="PortalescapeS" type="RESOURCE"/>
+  <resource name="WarpathS" type="RESOURCE"/>
+  <resource name="ShortcapS" type="RESOURCE"/>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+  <resource name="Flamethrower" type="RESOURCE"/>
+  <resource name="Rocketlauncher" type="RESOURCE"/>
+  <resource name="Scattergun" type="RESOURCE"/>
+  <resource name="Umbrella" type="RESOURCE"/>
+  <resource name="Medigun" type="RESOURCE"/>
+  <resource name="Minigun" type="RESOURCE"/>
+  <resource name="Pipebomblauncher" type="RESOURCE"/>
+  <resource name="Shotgun" type="RESOURCE"/>
+  <resource name="Revolver" type="RESOURCE"/>
+  <resource name="Rifle" type="RESOURCE"/>
+</resources>

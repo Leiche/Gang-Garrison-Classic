@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<event category="STEP" id="0">
+  <actions>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">vspeed += 0.6;
+if(vspeed&gt;10) {
+    vspeed=10; }
+    
+/*
+image_angle+=rotspeed;
+rotspeed/=1.1;
+if(abs(rotspeed)&lt;2) then rotspeed=0;
+if(abs(speed)&lt;4 and !place_free(x,y+1) and (image_angle&lt;90 or image_angle&gt;270)) then image_angle=mean(image_angle, 0)
+if(abs(speed)&lt;4 and !place_free(x,y+1) and (image_angle&gt;90 or image_angle&lt;270)) then image_angle=mean(image_angle, 180)
+
+*/
+</argument>
+      </arguments>
+    </action>
+  </actions>
+</event>

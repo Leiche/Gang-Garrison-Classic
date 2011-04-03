@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<event category="DRAW" id="0">
+  <actions>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">var xoffset, yoffset, xsize, ysize;    
+    xoffset = view_xview[0];
+    yoffset = view_yview[0];
+    xsize = view_wview[0];
+    ysize = view_hview[0];
+if global.myself.team == TEAM_BLUE offset=10;
+else offset = 0;
+if(global.myself.object == -1) exit; 
+// Suit
+    /* frame = floor(suit/maxsuit*12);
+    if frame &lt; 6
+        draw_set_color(c_red)
+    else
+        draw_set_color(c_yellow);
+    draw_sprite_ext(GGCHealthS, frame, xoffset+2, yoffset+564, 1, 1, 0, c_white, 0.7);
+    draw_set_font(fnt_gg2big);
+    draw_text_ext(xoffset+26, yoffset+581, hp, -1, -1);
+    draw_set_font(fnt_gg2); // If font is not reset, it screws up all onscreen text */
+// Health
+    hp = floor(global.myself.object.hp);
+    if hp &gt; global.myself.object.maxHp
+        hp = global.myself.object.maxHp;
+    if hp &lt; (global.myself.object.maxHp/3.5) {
+        healthframe = 1;
+        draw_set_color(c_red);
+    }else{
+        healthframe = 0;
+        draw_set_color(c_yellow);
+    }
+    draw_sprite_ext(GGCHealthS, healthframe, xoffset+24, yoffset+574, 1, 1, 0, c_white, 0.5);
+    draw_set_halign(fa_left)
+    draw_set_font(fnt_gg2big);
+    draw_text_ext(xoffset+48, yoffset+580, hp, -1, -1);
+    draw_set_font(fnt_gg2); // If font is not reset, it screws up all onscreen text
+</argument>
+      </arguments>
+    </action>
+  </actions>
+</event>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<event category="COLLISION" with="HealingCabinet">
+  <actions>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">if (global.mapchanging != 1)
+{
+    if hp &lt; maxHp || nutsNBolts &lt; 100 {
+        playsound(x,y,CbntHealSnd);
+        hp = maxHp;
+        nutsNBolts = maxNutsNBolts;
+    }
+
+    //ammo stuffs
+    if instance_exists(currentWeapon) {
+        if currentWeapon.object_index == Rocketlauncher {
+            if currentWeapon.rocketcount &lt; 4 playsound(x,y,PickupSnd);
+            currentWeapon.rocketcount = 4;
+            currentWeapon.alarm[5] = -1;
+        }
+        else if currentWeapon.object_index == Scattergun {
+            if currentWeapon.shellCount &lt; 50 playsound(x,y,PickupSnd);
+            currentWeapon.shellCount = 50;
+            currentWeapon.alarm[5] = -1;
+        }
+        else if currentWeapon.object_index == Flamethrower {
+            if currentWeapon.gas &lt; 190 playsound(x,y,PickupSnd);
+            currentWeapon.gas = 200;
+        }
+        else if currentWeapon.object_index == Shotgun {
+            if currentWeapon.shellCount &lt; 15 playsound(x,y,PickupSnd);
+            currentWeapon.shellCount = 15;
+            currentWeapon.alarm[5] = -1;
+        }
+        else if currentWeapon.object_index == Revolver {
+            if currentWeapon.bulletCount &lt; 6 playsound(x,y,PickupSnd);
+            currentWeapon.bulletCount = 6;
+            currentWeapon.alarm[5] = -1;
+        }
+        else if currentWeapon.object_index == Minigun {
+            if currentWeapon.bulletCount &lt; 190 playsound(x,y,PickupSnd);
+            currentWeapon.bulletCount = 200;
+        }
+        else if currentWeapon.object_index == Pipebomblauncher {
+            if currentWeapon.mineCount &lt; 6 playsound(x,y,PickupSnd);
+            currentWeapon.mineCount = 6;
+        }
+        else if currentWeapon.object_index == Medigun {
+            if currentWeapon.shellCount &lt; 70 playsound(x,y,PickupSnd);
+            currentWeapon.shellCount = 80;
+        }
+        else if currentWeapon.object_index == Blade {
+            if currentWeapon.bladePower &lt; 80 playsound(x,y,PickupSnd);
+            currentWeapon.bladePower = 100;
+        }
+    }
+}
+</argument>
+      </arguments>
+    </action>
+  </actions>
+</event>

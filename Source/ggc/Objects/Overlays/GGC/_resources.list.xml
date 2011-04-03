@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+  <resource name="EscortHUD" type="RESOURCE"/>
+  <resource name="ScorePanel" type="RESOURCE"/>
+  <resource name="FussballHUD" type="RESOURCE"/>
+  <resource name="HealthHud" type="RESOURCE"/>
+  <resource name="AmmoCounter" type="RESOURCE"/>
+  <resource name="ControlPointHUD" type="RESOURCE"/>
+</resources>

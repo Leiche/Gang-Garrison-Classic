@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<event category="DRAW" id="0">
+  <actions>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">{
+     if speed&gt;0.5  image_angle=direction;
+     if speed&lt;=0.5 image_angle = 0;
+    
+    
+    //draw_text(x,y-10,alarm[0])
+    draw_set_alpha(1);
+    var index;
+    if random(max(alarm[0]-10,15))&lt;6 then index=team+2 else index=team;  
+    draw_sprite_ext(sprite_index,index,x,y,image_xscale,image_yscale,image_angle,c_white,1);
+}
+</argument>
+      </arguments>
+    </action>
+  </actions>
+</event>

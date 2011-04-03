@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<event category="COLLISION" with="EscortTarget">
+  <actions>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">if (player.class == CLASS_CIVILIAN) {
+    if (global.isHost = true) {
+        sendEventEscortReachedTarget(player);
+        doEventEscortReachedTarget(player);
+        with(player.object) {
+            instance_destroy();
+        }
+        player.object = -1;
+        if (player.quickspawn=0){
+            player.alarm[5] = global.Server_Respawntime;
+        } else {
+            player.alarm[5] = 1;
+        }
+    }
+    sound_play(IntelPutSnd);
+}
+</argument>
+      </arguments>
+    </action>
+  </actions>
+</event>

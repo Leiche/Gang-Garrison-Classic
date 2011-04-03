@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<event category="STEP" id="1">
+  <actions>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">var point_x, point_y, target_x, target_y, count, icount, faekspeed, faektime, faekdistance, faeksound, faekside;
+if (confused == true &amp;&amp; id = global.myself.object) { // If confused and this is the player
+    numinstances = instance_number(FakeProjectile); // Check number of fake projectiles
+    if (numinstances &lt; 12) { // If less than 12 fake projectiles
+        count = 0;
+        icount = 0;
+        while (icount &lt; 36 &amp;&amp; count &lt; 2) { // Try 36 times to create a projectile, stop if made 2
+            icount += 1;
+            faekside = irandom(3);
+            // Random position on screen
+            switch (faekside) { 
+                case 0:
+                case 1:
+                    point_x = x + random(800)-400;
+                    break;
+                case 2:
+                case 3:
+                    point_y = y + random(600)-300;
+                    break;
+            }
+            // Random side of screen
+            switch (faekside) {
+                case 0:
+                    point_y = y - 300;
+                    break;
+                case 1:
+                    point_y = y + 300;
+                    break;
+                case 2:
+                    point_x = x - 400;
+                    break;
+                case 3:
+                    point_x = x + 400;
+                    break;
+            }
+            // Target slightly off player centre
+            target_x = x + random(sprite_width)-sprite_width/2;
+            target_y = y + random(sprite_height)-sprite_height/2;
+            if (!collision_line(target_x,target_y,point_x,point_y,Obstacle,true,true)) { // If no collisions with Obstacles along route
+                faek = instance_create(point_x,point_y,FakeProjectile); // Make fake projectile
+                faekspeed = 15; // Set speed
+                faeksound = ShotgunSnd; // Set sound
+                switch (irandom(3)) { // Pick random projectile type
+                    case 0:
+                        faek.sprite_index = ShotS;
+                        faekspeed = 12+random(1);
+                        break;
+                    case 1:
+                        faek.sprite_index = LaserS;
+                        break;
+                    case 2:
+                        if (player.team==TEAM_RED) {
+                            faek.sprite_index = RedRocketS;
+                        }else{
+                            faek.sprite_index = BlueRocketS;
+                        }
+                        faekspeed = 12;
+                        faeksound = RocketSnd;
+                        break;
+                }
+                faek.image_angle = point_direction(point_x,point_y,target_x,target_y); // Point towards player
+                if (faek.sprite_index != RedRocketS &amp;&amp; faek.sprite_index != BlueRocketS) { // Easy speed calculation
+                    faek.alarm[0] = point_distance(point_x,point_y,target_x,target_y)/faekspeed;
+                }else{ // Complex speed calculation (rawkit)
+                    faekdistance = point_distance(point_x,point_y,target_x,target_y);
+                    for (faektime = 0; faektime &lt; faekdistance; faektime += 1) {
+                        faekspeed += 1;
+                        faekspeed *= 0.92;
+                        faektime += faekspeed;
+                    }
+                    faek.alarm[0] = faektime;
+                    faekspeed = 12;
+                }
+                with (faek) {
+                    move_towards_point(target_x,target_y,faekspeed); // Make it move towards player
+                }
+                if (irandom(4)==1) { // Play sounds if 1 in 4 chance
+                    sound_volume(faeksound, 0.5+random(0.3)); // Random volume
+                    sound_play(faeksound);
+                }
+                count += 1;
+            }
+        }
+    }
+}
+
+if (releasedKeys &amp; $01) &amp;&amp; canthrowgrenade == true &amp;&amp; Grenades!=0 &amp;&amp; tapped == 0 {
+        tapped = 2
+        }
+        
+if  tapped == 2 {
+    sound_play(grenadeSnd);
+    nadeTimer =100;
+    tapped = 1
+    }  
+    
+if nadeTimer &gt;= 0
+    {
+    nadeTimer = nadeTimer-1;
+    }
+    
+if (pressedKeys &amp; $01) &amp;&amp; Grenades!=0 &amp;&amp; tapped == 1 {
+        alarm[4]=newThrowtime;
+        Grenades = Grenades-1;
+        alarm[3] = newGrentime;
+        Grentime = alarm[3]
+        canthrowgrenade = false
+        with(currentWeapon) {
+            nadefuse = owner.nadeTimer
+            event_user(6)
+            }
+        nadeTimer = 0;
+        tapped = 0;
+        }
+        
+if nadeTimer = 5 &amp;&amp; tapped == 1 {
+    with(currentWeapon) {
+            nadefuse = owner.nadeTimer
+            event_user(6)
+            }
+    alarm[4]=newThrowtime;
+    Grenades = Grenades-1;
+    alarm[3] = newGrentime;
+    Grentime = alarm[3]
+    canthrowgrenade = false
+    nadeTimer = 0;
+    tapped = 0;
+    }
+
+    if canthrowgrenade and Grenades != maxGrenades and not alarm[3] {
+        alarm[3] = newGrentime;
+        Grentime = alarm[3]
+    }
+    
+if (releasedKeys &amp; $10) &amp;&amp; (player.class == CLASS_SNIPER) {
+        with(currentWeapon) {
+        event_user(3)
+    }
+}
+
+
+if confused == true {
+    confusetime = confusetime-1
+    if confusetime &lt; 1 {
+            confused = false;
+        }
+    }
+
+
+if(pressedKeys &amp; $80) &amp;&amp; taunting==false &amp;&amp; omnomnomnom==false{
+    if(not place_free(x,y+1) &amp;&amp; place_free(x,y)) {
+        if canCloak {
+            if currentWeapon.readyToStab==true {
+                playsound(x,y,JumpSnd);
+                vspeed = -jumpStrength;
+            }
+        }
+        else {
+            playsound(x,y,JumpSnd);
+            vspeed = -jumpStrength;
+        }
+    }
+    else if((canDoublejump == 1) and (doublejumpUsed == 0) and (vspeed&gt;-jumpStrength)) {
+        vspeed = -jumpStrength;
+        playsound(x,y,JumpSnd);
+        doublejumpUsed = 1;
+        moveStatus = 0;
+    }
+}
+
+
+xoffset = view_xview[0];
+yoffset = view_yview[0];
+xsize = view_wview[0];
+ysize = view_hview[0];
+
+if(keyState &amp; $10)  &amp;&amp; taunting==false &amp;&amp; omnomnomnom==false {
+    if (global.isHost==true) || (global.isHost==false &amp;&amp; distance_to_point(xoffset+xsize/2,yoffset+ysize/2) &lt; 1600) || (player.class == CLASS_DEMOMAN) with(currentWeapon) event_user(1);
+} else {
+    with(currentWeapon) event_user(3);
+}
+    
+// Right click
+if(keyState &amp; $08) &amp;&amp; (taunting==false || player.class == CLASS_DEMOMAN) &amp;&amp; omnomnomnom==false{
+    if (global.isHost==true) || (distance_to_point(xoffset+xsize/2,yoffset+ysize/2) &lt; 1600) with(currentWeapon) event_user(2);
+}
+
+// Cloak
+if ((pressedKeys &amp; $08) &amp;&amp; canCloak &amp;&amp; ((cloakAlpha &lt;= 0.5 and cloak) || (cloakAlpha == 1 and !cloak)) &amp;&amp; !intel  &amp;&amp; taunting==false &amp;&amp; !(keyState &amp; $10)) {
+    cloak = !cloak;
+}
+
+if moveStatus == 1 speedfactor = 0.65;
+else if moveStatus == 2 speedfactor = 0.17;
+else if moveStatus == 3 speedfactor = 0.1;
+else if moveStatus == 4 speedfactor = 0.9;
+else speedfactor = 0.85;
+
+if (intel) &amp;&amp; speedfactor &gt; 0.75 speedfactor = 0.75;
+if (tranquilized) speedfactor = 0.6;
+
+if tranquilized = true {
+        if !variable_local_exists("tranquilizerParticleType") {
+            tranquilizerParticleType = part_type_create();
+            part_type_sprite(tranquilizerParticleType,TranqS,true,false,true);
+            part_type_alpha2(tranquilizerParticleType,1,1);
+            part_type_life(tranquilizerParticleType,15,20);
+            part_type_scale(tranquilizerParticleType,1,1);
+            part_type_speed(tranquilizerParticleType,1,2,0,0)
+            part_type_direction(tranquilizerParticleType,-180,180,0,0)
+        }
+        if !variable_global_exists("tranquilizerParticleSystem") &amp;&amp; tranquilized = true {
+            global.tranquilizerParticleSystem = part_system_create();
+            part_system_depth(global.tranquilizerParticleSystem, -9010);
+            }
+        if tranquilized = true &amp;&amp; speedfactor = 0.6 {
+        part_particles_create(global.tranquilizerParticleSystem,x,y,tranquilizerParticleType,1); 
+        }
+    }
+
+
+if(speedfactor&lt;0.7 &amp;&amp; tranquilized = false) {
+    if !variable_local_exists("jumpFlameParticleType") &amp;&amp; moveStatus != 3 {
+        jumpFlameParticleType = part_type_create();
+        part_type_sprite(jumpFlameParticleType,FlameS,true,false,true);
+        part_type_alpha2(jumpFlameParticleType,1,0.3);
+        part_type_life(jumpFlameParticleType,2,5);
+        part_type_scale(jumpFlameParticleType,0.7,-0.65);
+    }
+    
+    if !variable_global_exists("jumpFlameParticleSystem") &amp;&amp; moveStatus != 3 {
+        global.jumpFlameParticleSystem = part_system_create();
+        part_system_depth(global.jumpFlameParticleSystem, 10);
+    }
+
+    if(vspeed&lt;0) {
+        vspeed-=0.1;
+        if(global.particles == PARTICLES_NORMAL) {
+            if(speedfactor&gt;0.1 and (random(10)/10)&gt; speedfactor) {
+                effect_create_below(ef_smoke,x-hspeed*1.2,y-vspeed*1.2+20,0,c_gray);
+            }
+        }
+        if speedfactor &gt; 0.3 {
+            if(global.particles == PARTICLES_NORMAL or global.particles == PARTICLES_ALTERNATIVE) {
+                  if(random(7)&lt;5) {
+                        part_particles_create(global.jumpFlameParticleSystem,x,y+19,jumpFlameParticleType,1);
+                  }
+            }   
+        }
+    } else { 
+        moveStatus = 0;
+        //if(variable_local_exists("jumpFlameParticleType")) {
+            //part_type_destroy(jumpFlameParticleType);
+        //}
+    }
+}
+
+if(keyState &amp; $40)  &amp;&amp; taunting==false &amp;&amp; omnomnomnom==false{
+    if !canCloak hspeed -= runPower*speedfactor;
+    else if currentWeapon.readyToStab==true hspeed -= runPower*speedfactor;
+}
+    
+if(keyState &amp; $20)  &amp;&amp; taunting==false &amp;&amp; omnomnomnom==false{   
+    if !canCloak hspeed += runPower*speedfactor;
+    else if currentWeapon.readyToStab==true hspeed += runPower*speedfactor;
+}
+
+if(pressedKeys &amp; $04) {
+    setChatBubble(player, 45);
+}
+    
+// flame bubble
+if flamecount&gt;0 &amp;&amp; player.class != CLASS_PYRO &amp;&amp; random(80) &lt;= 1 {
+    setChatBubble(player, 49);
+}
+    
+pressedKeys = 0;
+releasedKeys = 0;
+    
+if (moveStatus = 2) {
+    hspeed/=1.04;
+} else {
+    if (moveStatus = 3) {
+        hspeed/=1.002;
+    } else {
+    hspeed/=1.15; 
+    }
+} 
+
+if(abs(hspeed)&lt;0.2 /*and not moveStatus = 3*/) {
+    hspeed=0;
+    animationImage=0;
+}    
+    
+if(place_free(x,y+1)) {
+    vspeed += 0.6;
+    if(vspeed&gt;10) {
+        vspeed=10;
+    }
+    animationImage = 1;
+} else {
+//moveStatus = 0; 
+    if(place_free(x,y)) {
+        doublejumpUsed = 0;
+    }
+}
+
+if (speed&gt;15) &amp;&amp; (!player.class == CLASS_SCOUT) {
+        speed=15 
+    } else if (speed&gt;20) {
+        speed=20 
+    }
+
+/*if(speed&gt;15) {
+    speed=15;
+}*/
+    
+if intel { 
+    if cloak==true {
+        cloak=false;
+        cloakAplha=1;
+    }
+}
+    
+animationImage = (animationImage+abs(hspeed)/20) mod CHARACTER_ANIMATION_LEN;
+
+if collision_point(x,y,SpawnRoom,0,0) player.quickspawn = 1;
+else player.quickspawn=0;
+
+//CP Collision    
+if collision_point(x,y,CaptureZone,0,0) &amp;&amp; cloak!=1 &amp;&amp; ubered==0 &amp;&amp; inZone==0 {
+    if player.class==CLASS_SCOUT capStrength = 2;
+    else capStrength = 1;
+    zone = instance_nearest(x,y,CaptureZone);
+    if player.team != zone.cp.team &amp;&amp; zone.cp.locked==0 &amp;&amp; (zone.cp.redCappers == 0 &amp;&amp; zone.cp.blueCappers == 0) playsound(x,y,CPBeginCapSnd);
+    if player.team == TEAM_RED {
+        if zone.cp.blueCappers &gt; 0 &amp;&amp; zone.cp.locked == 0 &amp;&amp; zone.cp.redCappers == 0 &amp;&amp; zone.cp.team == TEAM_RED{
+            playsound(x,y,CPDefendedSnd);
+            recordEventInLog(2,player.team,player.name);
+        }
+        zone.cp.redCappers+=capStrength;
+    }
+    else if player.team == TEAM_BLUE {
+        if zone.cp.redCappers &gt; 0 &amp;&amp; zone.cp.locked == 0 &amp;&amp; zone.cp.blueCappers == 0 &amp;&amp; zone.cp.team == TEAM_BLUE{
+            playsound(x,y,CPDefendedSnd);
+            recordEventInLog(2,player.team,player.name);
+        }
+        zone.cp.blueCappers+=capStrength;
+    }
+    inZone =1; 
+}
+else if collision_point(x,y,CaptureZone,0,0) &amp;&amp; (cloak == 1 || ubered == 1 )&amp;&amp; inZone == 1 {
+    if player.class==CLASS_SCOUT capStrength = 2;
+    else capStrength =1;
+    zone = instance_nearest(x,y,CaptureZone);
+    if player.team==TEAM_RED zone.cp.redCappers-=capStrength;
+    else if player.team==TEAM_BLUE zone.cp.blueCappers-=capStrength;
+    inZone = 0; 
+}
+else if !collision_point(x,y,CaptureZone,0,0) &amp;&amp; inZone == 1{       
+    if player.class==CLASS_SCOUT capStrength = 2;
+    else capStrength =1;
+    zone = instance_nearest(x,y,CaptureZone);
+    if player.team==TEAM_RED zone.cp.redCappers-=capStrength;
+    else if player.team==TEAM_BLUE zone.cp.blueCappers-=capStrength;
+    inZone=0;     
+}
+    
+// drop intel if ubered
+if(intel) &amp;&amp; ubered == 1 {
+    event_user(5);
+}
+
+//gotta regenerate some nuts
+if nutsNBolts &lt; 100 nutsNBolts += 0.1;
+else if nutsNBolts &gt; 100 nutsNBolts = 100;
+</argument>
+      </arguments>
+    </action>
+  </actions>
+</event>

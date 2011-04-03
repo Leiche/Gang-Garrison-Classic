@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<event category="ALARM" id="1">
+  <actions>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">if shooted &lt; 13 {
+    self.speed = 0
+    playsound(x,y,ChaingunSnd);
+    var shot;
+    shot = instance_create(x,y,Nail);
+    shot.direction=0;
+    shot.speed=13+random(1);
+    shot.owner=owner;
+    shot.ownerPlayer=ownerPlayer;
+    shot.team=team;
+    shot.damage= 5;
+    shot.weapon=WEAPON_GRENADE;
+    var shot2;
+    shot2 = instance_create(x,y,Nail);
+    shot2.direction=180;
+    shot2.speed=13+random(1);
+    shot2.owner=owner;
+    shot2.ownerPlayer=ownerPlayer;
+    shot2.team=team;
+    shot2.weapon=WEAPON_GRENADE;
+    shot.damage= 5;
+    alarm[1]=5
+    shooted = shooted+1
+    } else if shooted &gt;= 13 {
+    event_user(5);
+    }
+</argument>
+      </arguments>
+    </action>
+  </actions>
+</event>

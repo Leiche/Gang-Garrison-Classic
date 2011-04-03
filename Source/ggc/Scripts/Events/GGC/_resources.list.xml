@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+  <resource name="doEventEscortKilled" type="RESOURCE"/>
+  <resource name="doEventEscortReachedTarget" type="RESOURCE"/>
+  <resource name="sendEventEscortKilled" type="RESOURCE"/>
+  <resource name="sendEventEscortReachedTarget" type="RESOURCE"/>
+  <resource name="doEventGreifenFussball" type="RESOURCE"/>
+  <resource name="sendEventGreifenFussball" type="RESOURCE"/>
+  <resource name="doEventPunktenFussball" type="RESOURCE"/>
+  <resource name="sendEventPunktenFussball" type="RESOURCE"/>
+</resources>

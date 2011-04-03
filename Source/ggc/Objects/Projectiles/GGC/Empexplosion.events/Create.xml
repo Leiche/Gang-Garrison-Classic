@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<event category="CREATE" id="0">
+  <actions>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">{
+    characterHit = -1;
+    damage = 0;
+    bounced = false;
+    blastRadius = 120;
+    rotspeed=0;
+    explosionDamage = 80;
+    exploded = false;
+    knockback = 150;
+    alarm[0]=13
+
+ with (Character) {
+        if (distance_to_object(other) &lt; other.blastRadius){
+            motion_add(point_direction(other.x,other.y,x,y),10-10*(distance_to_object(other)/other.blastRadius));
+                hp -= other.explosionDamage*(1-(distance_to_object(other)/other.blastRadius));
+                other.ammo = 0
+                //effect_create_below(ef_explosion,x,y,0,c_orange);
+                playsound(x,y,ExplosionSnd);
+                lastDamageDealer = other.ownerPlayer;
+                lastDamageSource = other.weapon;
+                if(global.gibLevel &gt; 0){
+                repeat(3) {
+                    var blood;
+                    blood = instance_create(x,y,Blood);
+                    blood.direction = point_direction(other.x,other.y,x,y)-180;}
+                }
+                if id==other.ownerPlayer.object and other.team == team {
+                    moveStatus = 1;
+                    vspeed*=0.8;
+                }
+            }
+            cloakAlpha = min(cloakAlpha + 0.2, 1);
+        }
+       
+    with (Rocket) {
+        if(distance_to_object(other) &lt; other.blastRadius/7 and (other.team != team or other.ownerPlayer == ownerPlayer)){
+                characterHit=-1;
+                event_user(5);
+        }
+    }
+    with(Mine) {
+        if(distance_to_object(other) &lt; other.blastRadius/7 and (other.team != team or other.ownerPlayer == ownerPlayer)){
+            event_user(2);
+        }
+    }    
+    instance_destroy();
+}
+
+</argument>
+      </arguments>
+    </action>
+    <action id="542" library="1">
+      <!--action name: Transform_Sprite-->
+      <kind>NORMAL</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>FUNCTION</actionType>
+      <functionName>action_sprite_transform</functionName>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="EXPRESSION">2.2</argument>
+        <argument kind="EXPRESSION">2.2</argument>
+        <argument kind="EXPRESSION">0</argument>
+        <argument kind="MENU">0</argument>
+      </arguments>
+    </action>
+  </actions>
+</event>

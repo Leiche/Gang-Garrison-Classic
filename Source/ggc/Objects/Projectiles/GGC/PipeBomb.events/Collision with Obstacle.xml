@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<event category="COLLISION" with="Obstacle">
+  <actions>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">{
+    if !bounced { explosionDamage-=2 knockback-=1 }
+ //   if bounced and !fuse { alarm[0]=50 fuse=true }
+    var ospeed;
+    bounced=true;
+    move_bounce_solid(1);
+    ospeed = vspeed;
+    speed*=0.45
+    if abs(speed)&lt;1 then speed=0;
+    if vspeed&lt;ospeed then rotspeed*=-0.8 else rotspeed*=0.8;
+}
+</argument>
+      </arguments>
+    </action>
+  </actions>
+</event>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+  <resource name="EscortHUDS" type="RESOURCE"/>
+  <resource name="adctfHud" type="RESOURCE"/>
+  <resource name="EscortArrowS" type="RESOURCE"/>
+  <resource name="UmbrellaAmmoS" type="RESOURCE"/>
+  <resource name="GGCSuitEnergyS" type="RESOURCE"/>
+  <resource name="GGCHealthS" type="RESOURCE"/>
+  <resource name="ScorePanelS" type="RESOURCE"/>
+  <resource name="FussballHudS" type="RESOURCE"/>
+  <resource name="GGCGrenhud" type="RESOURCE"/>
+  <resource name="ControlPointStatusS" type="RESOURCE"/>
+  <resource name="ControlPointLockS" type="RESOURCE"/>
+  <resource name="ControlPointCappersS" type="RESOURCE"/>
+  <resource name="TimerS" type="RESOURCE"/>
+  <resource name="TimerHudS" type="RESOURCE"/>
+</resources>

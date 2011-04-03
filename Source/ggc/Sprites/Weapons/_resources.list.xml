@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+  <resource name="ShotgunS_O" type="RESOURCE"/>
+  <resource name="BackstabRedS" type="RESOURCE"/>
+  <resource name="BackstabBlueS" type="RESOURCE"/>
+  <resource name="GGC" type="GROUP"/>
+  <resource name="grenades" type="GROUP"/>
+</resources>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<event category="DRAW" id="0">
+  <actions>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">var xoffset, yoffset, xsize, ysize;
+xoffset = view_xview[0];
+yoffset = view_yview[0];
+xsize = view_wview[0];
+ysize = view_hview[0];
+draw_set_alpha(1);
+
+// Ammo
+
+if global.myself.object != -1 {
+    if instance_exists(global.myself.object.currentWeapon) {
+    
+    // Grenades
+    if (global.myself.class != CLASS_CIVILIAN){
+        gframe = floor(12-global.myself.object.alarm[3]/global.myself.object.newGrentime*12);
+        draw_sprite_ext(GGCGrenhud, gframe, xoffset+743, yoffset+526, 2, 2, 0, c_white, 0.7);
+    }
+    switch(global.myself.class){ // Get ammo
+        case CLASS_SOLDIER:
+            ammo = string(global.myself.object.currentWeapon.rocketcount);
+            ammo_g = string(global.myself.object.Grenades);
+            break;
+        case CLASS_DEMOMAN:
+            ammo = string(global.myself.object.currentWeapon.lobbed)+'|8 '+string(global.myself.object.currentWeapon.mineCount);
+            ammo_g = string(global.myself.object.Grenades);
+            break;
+        case CLASS_ENGINEER:
+            ammo = string(floor(global.myself.object.nutsNBolts))+'| '+string(global.myself.object.currentWeapon.shellCount); 
+            ammo_g = string(global.myself.object.Grenades);
+            break;
+        case CLASS_SCOUT:
+        case CLASS_MEDIC:
+            ammo = string(global.myself.object.currentWeapon.shellCount);
+            ammo_g = string(global.myself.object.Grenades);
+            break;
+        case CLASS_SPY:
+        case CLASS_HEAVY:
+            ammo = string(global.myself.object.currentWeapon.bulletCount);
+            ammo_g = string(global.myself.object.Grenades);
+            break;
+        case CLASS_PYRO:
+            ammo = string(global.myself.object.currentWeapon.gas);
+            ammo_g = string(global.myself.object.Grenades);
+            break;
+        case CLASS_SNIPER:
+            ammo = '-1';
+            ammo_g = string(global.myself.object.Grenades);
+            break;
+        case CLASS_CIVILIAN:
+            ammo = '-1';
+            ammo_g = '-1';
+            break;
+    }
+    
+    draw_sprite_ext(Icon, global.myself.class, xoffset+772, yoffset+563, 3, 3, 0, c_yellow, 0.5);
+    draw_set_font(fnt_gg2big);
+    draw_set_color(c_yellow);
+    draw_set_halign(fa_right);
+           
+             if global.myself.object.nadeTimer &gt;0 {
+        draw_text_ext(xoffset+710, yoffset+546, global.myself.object.nadeTimer/30, -1,-1);
+          }
+    if ammo_g != '-1'
+        draw_text_ext(xoffset+740, yoffset+546, global.myself.object.Grenades, -1, -1);
+        
+    if ammo != '-1'
+        draw_text_ext(xoffset+774, yoffset+580, ammo, -1, -1);
+    else
+        draw_sprite_ext(infinity, 0, xoffset+750, yoffset+583, 2, 2, 0, c_yellow, 0.5);
+    draw_set_halign(fa_center);
+    draw_set_font(fnt_gg2); // If font is not reset, it screws up all onscreen text
+    }
+}
+</argument>
+      </arguments>
+    </action>
+  </actions>
+</event>
