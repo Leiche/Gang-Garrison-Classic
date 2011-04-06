@@ -147,6 +147,12 @@ instance_create(0,0,TruefortO);</creationCode>
   </views>
   <instances>
     <instance>
+      <object>IntelligenceRed</object>
+      <position x="468" y="918"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
       <object>SpawnPointBlue</object>
       <position x="2772" y="432"/>
       <creationCode/>
@@ -155,6 +161,18 @@ instance_create(0,0,TruefortO);</creationCode>
     <instance>
       <object>SpawnPointBlue</object>
       <position x="2844" y="432"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>IntelligenceBaseRed</object>
+      <position x="468" y="918"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>IntelligenceBaseBlue</object>
+      <position x="3324" y="912"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
@@ -599,24 +617,6 @@ instance_create(0,0,TruefortO);</creationCode>
     <instance>
       <object>BlueTeamGate</object>
       <position x="3582" y="828"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>FussballTorRot</object>
-      <position x="456" y="906"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>FussballTorBlau</object>
-      <position x="3312" y="906"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>FussballBase</object>
-      <position x="1896" y="702"/>
       <creationCode/>
       <locked>false</locked>
     </instance>

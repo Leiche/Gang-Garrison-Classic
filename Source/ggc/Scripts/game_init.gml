@@ -89,15 +89,17 @@
     maps[2] = ini_read_real("Maps", "ctf_well", 2);
     //map_badlands hrhr
     maps[3] = ini_read_real("Maps", "ctf_badlands", 3);
+    //map_stonetwo by Ozoh!
+    maps[4] = ini_read_real("Maps", "ctf_stonetwo", 4);
     //map_warpath instant CP :D
-    maps[4] = ini_read_real("Maps", "cp_warpath",4);
+    maps[5] = ini_read_real("Maps", "cp_warpath",5);
     //map_shortcap instant CP in 2forts backyard
-    maps[5] = ini_read_real("Maps", "cp_shortcap",5);
+    maps[6] = ini_read_real("Maps", "cp_shortcap",6);
     //map_frontaldanger with the VIP
-    maps[6] = ini_read_real("Maps", "hh_frontaldanger", 6);
+    maps[7] = ini_read_real("Maps", "hh_frontaldanger", 7);
     //map_portalescape for science
-    maps[7] = ini_read_real("Maps", "hh_portalescape",7); 
-    maps[8] = ini_read_real("Maps", "cp_cfort",8); 
+    maps[8] = ini_read_real("Maps", "hh_portalescape",8); 
+    maps[9] = ini_read_real("Maps", "fb_warehouse",9); 
     //Server respawn time calculator. Converts each second to a frame. (read: multiply by 30 :hehe:)
     if (global.Server_RespawntimeSec == 0)
     {
@@ -114,11 +116,12 @@
     ini_write_real("Maps", "ctf_2fortclassic", maps[1]);
     ini_write_real("Maps", "ctf_well", maps[2]);
     ini_write_real("Maps", "ctf_badlands", maps[3]);
-    ini_write_real("Maps", "cp_warpath", maps[4]);
-    ini_write_real("Maps", "cp_shortcap", maps[5]);
-    ini_write_real("Maps", "hh_frontaldanger", maps[6]);
-    ini_write_real("Maps", "hh_portalescape", maps[7]);
-    ini_write_real("Maps", "cp_cfort", maps[8]);
+    ini_write_real("Maps", "ctf_stonetwo", maps[4]);
+    ini_write_real("Maps", "cp_warpath", maps[5]);
+    ini_write_real("Maps", "cp_shortcap", maps[6]);
+    ini_write_real("Maps", "hh_frontaldanger", maps[7]);
+    ini_write_real("Maps", "hh_portalescape", maps[8]);
+    ini_write_real("Maps", "fb_warehouse", maps[9]);
     ini_close();
     
        
@@ -204,7 +207,7 @@ global.launchMap = "";
         var i, sort_list;
         sort_list = ds_list_create();
         // that <=[number] should always be the count of the total maps FUCKING NOTHING SELF EXPLAINATORY
-        for(i=1; i <= 8; i += 1) {
+        for(i=1; i <= 9; i += 1) {
             if(maps[i] != 0) ds_list_add(sort_list, ((100*maps[i])+i));
         }
         ds_list_sort(sort_list, 1);
@@ -234,7 +237,7 @@ global.launchMap = "";
                     ds_list_add(global.map_rotation, "hh_portalescape");
                 break; 
                 case 8:
-                    ds_list_add(global.map_rotation, "cp_cfort");
+                    ds_list_add(global.map_rotation, "fb_warehouse");
                 break; 
                     
             }

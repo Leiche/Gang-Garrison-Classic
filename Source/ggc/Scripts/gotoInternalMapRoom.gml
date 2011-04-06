@@ -12,6 +12,9 @@
         case "ctf_badlands":
             room_goto_fix(badlands);
             break;
+        case "ctf_stonetwo":
+            room_goto_fix(stonetwo);
+            break;
         case "cp_warpath":
             room_goto_fix(warpath);
             break;
@@ -24,8 +27,8 @@
         case "hh_portalescape":
             room_goto_fix(portalescape);
             break;
-        case "cp_cfort":
-            room_goto_fix(cfort);
+        case "fb_warehouse":
+            room_goto_fix(warehouse);
             break;
         /*
         case "ctf_waterway":

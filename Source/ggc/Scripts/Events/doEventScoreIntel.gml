@@ -16,6 +16,6 @@ if(argument0.team == TEAM_RED) {
 }
 
 if(argument0.object != -1) {
-    argument0.object.fussball = false;
+    argument0.object.intel = false;
     argument0.object.animationOffset = CHARACTER_ANIMATION_NORMAL;
 }

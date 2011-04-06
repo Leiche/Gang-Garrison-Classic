@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-  <resource name="twofortclassic_notbroken" type="RESOURCE"/>
+  <resource name="twofortclassic" type="RESOURCE"/>
   <resource name="classicwell" type="RESOURCE"/>
   <resource name="badlands" type="RESOURCE"/>
+  <resource name="stonetwo" type="RESOURCE"/>
   <resource name="frontaldanger" type="RESOURCE"/>
   <resource name="portalescape" type="RESOURCE"/>
   <resource name="warpath" type="RESOURCE"/>
   <resource name="shortcap" type="RESOURCE"/>
   <resource name="cfort" type="RESOURCE"/>
-  <resource name="twofortclassic" type="RESOURCE"/>
+  <resource name="warehouse" type="RESOURCE"/>
   <resource name="CustomMapRoom" type="RESOURCE"/>
 </resources>
