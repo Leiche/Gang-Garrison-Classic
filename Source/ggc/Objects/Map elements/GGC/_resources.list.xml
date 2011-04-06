@@ -2,6 +2,6 @@
 <resources>
   <resource name="Escort" type="GROUP"/>
   <resource name="CP" type="GROUP"/>
-  <resource name="Fußball" type="GROUP"/>
+  <resource name="Fussball" type="GROUP"/>
   <resource name="genericSetupGate" type="RESOURCE"/>
 </resources>
