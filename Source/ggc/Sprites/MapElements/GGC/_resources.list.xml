@@ -3,7 +3,7 @@
   <resource name="EscortTargetS" type="RESOURCE"/>
   <resource filename="EscortTargetS_old" name="EscortTargetS.old" type="RESOURCE"/>
   <resource name="FussballS" type="RESOURCE"/>
-  <resource name="FußballBaseS" type="RESOURCE"/>
-  <resource name="FußballtorRotS" type="RESOURCE"/>
-  <resource name="FußballtorBlauS" type="RESOURCE"/>
+  <resource name="FussballBaseS" type="RESOURCE"/>
+  <resource name="FussballtorRotS" type="RESOURCE"/>
+  <resource name="FussballtorBlauS" type="RESOURCE"/>
 </resources>
