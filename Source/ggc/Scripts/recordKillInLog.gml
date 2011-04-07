@@ -63,6 +63,9 @@
                 case WEAPON_GRENADE:
                     ds_map_add(map, 2, GrenadeFragS);
                     break; 
+                case WEAPON_UMBRELLA:
+                    ds_map_add(map, 2, UmbrellaS);
+                    break;            
                     
                     /*
                          
@@ -85,10 +88,7 @@
                     break;                         
                 case BLU_DEFEND_INTEL:
                     ds_map_add(map, 2, DefendedBlueS);
-                    break;       
-                case WEAPON_UMBRELLA:
-                    ds_map_add(map, 2, UmbrellaS);
-                    break;                                
+                    break;                           
                     
                     */                  
 

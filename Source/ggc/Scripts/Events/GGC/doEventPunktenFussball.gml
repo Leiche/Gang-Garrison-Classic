@@ -19,3 +19,9 @@ if(argument0.object != -1) {
     argument0.object.fussball = false;
     argument0.object.animationOffset = CHARACTER_ANIMATION_NORMAL;
 }
+
+    with Player {
+//        canSpawn = 1;
+        if object != -1 with object instance_destroy();
+        alarm[5] = 1;
+    }
