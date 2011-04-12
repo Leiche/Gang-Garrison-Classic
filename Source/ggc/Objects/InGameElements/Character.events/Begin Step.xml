@@ -104,7 +104,7 @@ if (releasedKeys &amp; $01) &amp;&amp; canthrowgrenade == true &amp;&amp; Grenad
         }
         
 if  tapped == 2 {
-    sound_play(grenadeSnd);
+    playsound(x,y,grenadeSnd);
     nadeTimer =100;
     tapped = 1
     }  
