@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <room>
   <caption/>
-  <size height="1296" width="3798"/>
+  <size height="1800" width="4728"/>
   <grid>
     <isometric>false</isometric>
     <snap x="6" y="6"/>
@@ -9,14 +9,15 @@
   <speed>30</speed>
   <persistent>false</persistent>
   <creationCode>basicRoomSetup();
-instance_create(0,0,TruefortO);</creationCode>
+instance_create(0,0,WarehouseO);
+</creationCode>
   <backgroundColor>000000</backgroundColor>
   <drawBackgroundColor>true</drawBackgroundColor>
   <backgrounds>
     <backgroundDef>
       <visibleOnRoomStart>true</visibleOnRoomStart>
       <isForeground>false</isForeground>
-      <backgroundImage>TruefortB</backgroundImage>
+      <backgroundImage>warehouseB</backgroundImage>
       <offset x="0" y="0"/>
       <speed x="0" y="0"/>
       <tileHorizontally>false</tileHorizontally>
@@ -159,66 +160,6 @@ instance_create(0,0,TruefortO);</creationCode>
       <locked>false</locked>
     </instance>
     <instance>
-      <object>SpawnPointRed</object>
-      <position x="900" y="444"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>SpawnPointRed</object>
-      <position x="1020" y="438"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>SpawnPointRed</object>
-      <position x="954" y="444"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>RedTeamGate</object>
-      <position x="192" y="828"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>RedTeamGate</object>
-      <position x="198" y="828"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>RedTeamGate</object>
-      <position x="204" y="828"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>RedTeamGate</object>
-      <position x="822" y="396"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>RedTeamGate</object>
-      <position x="822" y="456"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>RedTeamGate</object>
-      <position x="828" y="396"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>RedTeamGate</object>
-      <position x="828" y="456"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
       <object>BlueTeamGate</object>
       <position x="2970" y="396"/>
       <creationCode/>
@@ -244,25 +185,7 @@ instance_create(0,0,TruefortO);</creationCode>
     </instance>
     <instance>
       <object>HealingCabinet</object>
-      <position x="3672" y="870"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>HealingCabinet</object>
       <position x="2808" y="444"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>HealingCabinet</object>
-      <position x="96" y="870"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>HealingCabinet</object>
-      <position x="948" y="444"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
@@ -393,168 +316,6 @@ instance_create(0,0,TruefortO);</creationCode>
       <locked>false</locked>
     </instance>
     <instance>
-      <object>SpawnRoom</object>
-      <position x="834" y="450"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>SpawnRoom</object>
-      <position x="876" y="450"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>SpawnRoom</object>
-      <position x="918" y="450"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>SpawnRoom</object>
-      <position x="960" y="450"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>SpawnRoom</object>
-      <position x="1002" y="450"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>SpawnRoom</object>
-      <position x="1044" y="450"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>SpawnRoom</object>
-      <position x="1044" y="408"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>SpawnRoom</object>
-      <position x="1044" y="366"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>SpawnRoom</object>
-      <position x="1002" y="366"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>SpawnRoom</object>
-      <position x="960" y="366"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>SpawnRoom</object>
-      <position x="1002" y="408"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>SpawnRoom</object>
-      <position x="960" y="408"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>SpawnRoom</object>
-      <position x="918" y="408"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>SpawnRoom</object>
-      <position x="876" y="408"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>SpawnRoom</object>
-      <position x="834" y="408"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>SpawnRoom</object>
-      <position x="834" y="366"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>SpawnRoom</object>
-      <position x="876" y="366"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>SpawnRoom</object>
-      <position x="918" y="366"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>SpawnRoom</object>
-      <position x="882" y="324"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>SpawnRoom</object>
-      <position x="924" y="324"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>SpawnRoom</object>
-      <position x="966" y="324"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>SpawnRoom</object>
-      <position x="1008" y="324"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>SpawnRoom</object>
-      <position x="1050" y="324"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>RedTeamGate</object>
-      <position x="1086" y="432"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>RedTeamGate</object>
-      <position x="1086" y="396"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>RedTeamGate</object>
-      <position x="1092" y="450"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>RedTeamGate</object>
-      <position x="1092" y="396"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
       <object>BlueTeamGate</object>
       <position x="2694" y="432"/>
       <creationCode/>
@@ -579,44 +340,338 @@ instance_create(0,0,TruefortO);</creationCode>
       <locked>false</locked>
     </instance>
     <instance>
-      <object>BlueTeamGate</object>
-      <position x="3588" y="828"/>
+      <object>RedTeamGate</object>
+      <position x="456" y="960"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
-      <object>BlueTeamGate</object>
-      <position x="3594" y="828"/>
+      <object>RedTeamGate</object>
+      <position x="456" y="1020"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
-      <object>BlueTeamGate</object>
-      <position x="3600" y="828"/>
+      <object>RedTeamGate</object>
+      <position x="462" y="1020"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
-      <object>BlueTeamGate</object>
-      <position x="3582" y="828"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>FussballTorRot</object>
-      <position x="456" y="906"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>FussballTorBlau</object>
-      <position x="3312" y="906"/>
+      <object>RedTeamGate</object>
+      <position x="462" y="966"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
       <object>FussballBase</object>
-      <position x="1896" y="702"/>
+      <position x="2358" y="1434"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FussballTorRot</object>
+      <position x="300" y="1230"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FussballTorRot</object>
+      <position x="300" y="1200"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FussballTorRot</object>
+      <position x="300" y="1170"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FussballTorRot</object>
+      <position x="300" y="1140"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FussballTorRot</object>
+      <position x="300" y="1110"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FussballTorBlau</object>
+      <position x="4398" y="1140"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FussballTorBlau</object>
+      <position x="4398" y="1170"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FussballTorBlau</object>
+      <position x="4398" y="1200"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FussballTorBlau</object>
+      <position x="4398" y="1230"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>HealingCabinet</object>
+      <position x="4404" y="1014"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>HealingCabinet</object>
+      <position x="294" y="1014"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="180" y="1020"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="180" y="978"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="222" y="978"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="222" y="1020"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="264" y="1020"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="264" y="978"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="306" y="978"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="306" y="1020"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="348" y="978"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="348" y="1020"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="390" y="978"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="390" y="1020"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="414" y="978"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="414" y="1020"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="4272" y="1020"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="4314" y="1020"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="4356" y="1020"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="4398" y="1020"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="4440" y="1020"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="4476" y="1020"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="4518" y="1020"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="4272" y="978"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="4314" y="978"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="4356" y="978"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="4398" y="978"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="4440" y="978"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="4524" y="978"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>BlueTeamGate</object>
+      <position x="4266" y="960"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>BlueTeamGate</object>
+      <position x="4266" y="1020"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>BlueTeamGate</object>
+      <position x="4260" y="1020"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>BlueTeamGate</object>
+      <position x="4260" y="960"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnPointBlue</object>
+      <position x="4314" y="1002"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnPointBlue</object>
+      <position x="4368" y="1002"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnPointBlue</object>
+      <position x="4422" y="1002"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnPointBlue</object>
+      <position x="4476" y="1002"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnRoom</object>
+      <position x="4482" y="978"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnPointRed</object>
+      <position x="222" y="996"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnPointRed</object>
+      <position x="270" y="996"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnPointRed</object>
+      <position x="318" y="996"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>SpawnPointRed</object>
+      <position x="372" y="996"/>
       <creationCode/>
       <locked>false</locked>
     </instance>

@@ -22,4 +22,5 @@
   <resource name="ShortcapB" type="RESOURCE"/>
   <resource name="cfortB" type="RESOURCE"/>
   <resource name="stonetwoB" type="RESOURCE"/>
+  <resource name="warehouseB" type="RESOURCE"/>
 </resources>
