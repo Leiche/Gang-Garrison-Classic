@@ -7,6 +7,8 @@ recordEventInLog(3, argument0.team, argument0.name);
 argument0.caps += 1;
 if(argument0.team == TEAM_RED) {
     global.redCaps += 1;
+    Grenades = maxGrenades;
+    hp = maxHp ;
     instance_create(IntelligenceBaseBlue.x, IntelligenceBaseBlue.y, IntelligenceBlue);
 } else if(argument0.team == TEAM_BLUE) {
     global.blueCaps += 1;

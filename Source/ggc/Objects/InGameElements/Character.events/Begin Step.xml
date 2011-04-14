@@ -153,6 +153,9 @@ if (releasedKeys &amp; $10) &amp;&amp; (player.class == CLASS_SNIPER) {
     }
 }
 
+if Grenades &gt; maxGrenades {
+    Grenades = maxGrenades;
+    }
 
 if confused == true {
     confusetime = confusetime-1
