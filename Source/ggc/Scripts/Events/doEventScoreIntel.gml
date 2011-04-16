@@ -9,6 +9,7 @@ if(argument0.team == TEAM_RED) {
     global.redCaps += 1;
     Grenades = maxGrenades;
     hp = maxHp ;
+    alarm[3] = 0;
     instance_create(IntelligenceBaseBlue.x, IntelligenceBaseBlue.y, IntelligenceBlue);
 } else if(argument0.team == TEAM_BLUE) {
     global.blueCaps += 1;

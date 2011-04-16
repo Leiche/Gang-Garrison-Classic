@@ -142,7 +142,7 @@ if nadeTimer = 5 &amp;&amp; tapped == 1 {
     tapped = 0;
     }
 
-    if canthrowgrenade and Grenades != maxGrenades and not alarm[3] {
+    if canthrowgrenade &amp;&amp; Grenades != maxGrenades and not alarm[3] {
         alarm[3] = newGrentime;
         Grentime = alarm[3]
     }
