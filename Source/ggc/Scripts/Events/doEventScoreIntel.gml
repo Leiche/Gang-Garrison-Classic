@@ -7,9 +7,6 @@ recordEventInLog(3, argument0.team, argument0.name);
 argument0.caps += 1;
 if(argument0.team == TEAM_RED) {
     global.redCaps += 1;
-    Grenades = maxGrenades;
-    hp = maxHp ;
-    alarm[3] = 0;
     instance_create(IntelligenceBaseBlue.x, IntelligenceBaseBlue.y, IntelligenceBlue);
 } else if(argument0.team == TEAM_BLUE) {
     global.blueCaps += 1;
@@ -21,4 +18,7 @@ if(argument0.team == TEAM_RED) {
 if(argument0.object != -1) {
     argument0.object.intel = false;
     argument0.object.animationOffset = CHARACTER_ANIMATION_NORMAL;
+    argument0.object.Grenades = 3;
+    argument0.object.hp = 999;
+    argument0.object.alarm[3] = 0;
 }
