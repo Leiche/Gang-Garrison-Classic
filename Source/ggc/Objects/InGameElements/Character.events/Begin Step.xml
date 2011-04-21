@@ -73,6 +73,11 @@ if (confused == true &amp;&amp; id = global.myself.object) { // If confused and 
                         faeksound = RocketSnd;
                         break;
                 }
+                if (player.team==TEAM_RED) {
+                    faek.team = TEAM_RED;
+                }else{
+                    faek.team = TEAM_BLUE;
+                }
                 faek.image_angle = point_direction(point_x,point_y,target_x,target_y); // Point towards player
                 if (faek.sprite_index != RedRocketS &amp;&amp; faek.sprite_index != BlueRocketS) { // Easy speed calculation
                     faek.alarm[0] = point_distance(point_x,point_y,target_x,target_y)/faekspeed;
