@@ -109,7 +109,7 @@ if (releasedKeys &amp; $01) &amp;&amp; canthrowgrenade == true &amp;&amp; Grenad
         }
         
 if  tapped == 2 {
-    sound_play(grenadeSnd);
+    playsound(x,y,grenadeSnd);
     nadeTimer =100;
     tapped = 1
     }  
@@ -147,7 +147,7 @@ if nadeTimer = 5 &amp;&amp; tapped == 1 {
     tapped = 0;
     }
 
-    if canthrowgrenade and Grenades != maxGrenades and not alarm[3] {
+    if canthrowgrenade &amp;&amp; Grenades != maxGrenades and not alarm[3] {
         alarm[3] = newGrentime;
         Grentime = alarm[3]
     }
@@ -158,6 +158,9 @@ if (releasedKeys &amp; $10) &amp;&amp; (player.class == CLASS_SNIPER) {
     }
 }
 
+if Grenades &gt; maxGrenades {
+    Grenades = maxGrenades;
+    }
 
 if confused == true {
     confusetime = confusetime-1

@@ -13,7 +13,7 @@
       <not>false</not>
       <appliesTo>.self</appliesTo>
       <arguments>
-        <argument kind="STRING">    vspeed+=0;
+        <argument kind="STRING">    vspeed+=0.0;
     image_alpha*=0.95;
     image_angle=direction;
     

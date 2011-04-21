@@ -18,4 +18,7 @@ if(argument0.team == TEAM_RED) {
 if(argument0.object != -1) {
     argument0.object.intel = false;
     argument0.object.animationOffset = CHARACTER_ANIMATION_NORMAL;
+    argument0.object.Grenades = 3;
+    argument0.object.hp = 999;
+    argument0.object.alarm[3] = 0;
 }
