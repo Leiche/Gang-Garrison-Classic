@@ -701,30 +701,6 @@ instance_create(0,0,BadlandsO);
     </instance>
     <instance>
       <object>FlagCapBlue</object>
-      <position x="636" y="816"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>FlagCapBlue</object>
-      <position x="636" y="774"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>FlagCapBlue</object>
-      <position x="612" y="816"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>FlagCapBlue</object>
-      <position x="612" y="774"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>FlagCapBlue</object>
       <position x="4146" y="816"/>
       <creationCode/>
       <locked>false</locked>
@@ -744,6 +720,30 @@ instance_create(0,0,BadlandsO);
     <instance>
       <object>FlagCapBlue</object>
       <position x="4128" y="774"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FlagCapRed</object>
+      <position x="630" y="816"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FlagCapRed</object>
+      <position x="630" y="774"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FlagCapRed</object>
+      <position x="612" y="816"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FlagCapRed</object>
+      <position x="612" y="774"/>
       <creationCode/>
       <locked>false</locked>
     </instance>

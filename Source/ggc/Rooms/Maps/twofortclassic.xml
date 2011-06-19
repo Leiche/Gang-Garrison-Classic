@@ -645,25 +645,25 @@ instance_create(0,0,TruefortO);</creationCode>
       <locked>false</locked>
     </instance>
     <instance>
-      <object>FlagCapBlue</object>
+      <object>FlagCapRed</object>
       <position x="582" y="444"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
-      <object>FlagCapBlue</object>
+      <object>FlagCapRed</object>
       <position x="582" y="402"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
-      <object>FlagCapBlue</object>
+      <object>FlagCapRed</object>
       <position x="564" y="444"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
-      <object>FlagCapBlue</object>
+      <object>FlagCapRed</object>
       <position x="564" y="402"/>
       <creationCode/>
       <locked>false</locked>
