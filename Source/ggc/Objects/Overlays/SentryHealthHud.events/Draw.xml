@@ -24,45 +24,12 @@ if global.myself.object == -1 || global.myself.class!=CLASS_ENGINEER exit;
 if global.myself.sentry != -1{
 maxHp = global.myself.sentry.maxHp;
 hp = global.myself.sentry.hp; 
-draw_healthbar(xoffset+45, yoffset+477, xoffset+87, yoffset+515,hp*100/maxHp,c_black,c_red,c_green,3,true,false);
 draw_set_valign(fa_center);
 draw_set_halign(fa_center);
-
-if (hp &gt; (maxHp/3.5))
-    {
-        if (hp &lt; 99)
-        {
-            draw_text_color(xoffset+69,yoffset+495,string(round(hp)),c_white,c_white,c_white,c_white,255);
-            draw_sprite_ext(SentryHUD,offset,xoffset+5, yoffset+455,2,2,0,c_white,1);
-            exit;
-        }
-    draw_text_color(xoffset+69,yoffset+495,string(round(hp)),c_white,c_white,c_white,c_white,255);
-    }
-    
-else if (hp &lt; (maxHp/3.5))
-{
-    if (hp &lt; 99 &amp;&amp; hp &gt;= 10)
-    {
-        draw_text_color(xoffset+69,yoffset+495,string(round(hp)),c_red,c_red,c_red,c_red,1);
-    }
-    else if (hp &lt; 9 || hp == 0)
-    {
-        if (round(hp) == 0)
-        {
-            draw_text_color(xoffset+69,yoffset+495,1,c_red,c_red,c_red,c_red,1);
-        }
-        else
-        {
-            draw_text_color(xoffset+69,yoffset+495,string(round(hp)),c_red,c_red,c_red,c_red,1);
-        }
-    }
-    else if (hp &lt; 0)
-    {
-        draw_text_color(xoffset+69,yoffset+495,0,c_red,c_red,c_red,c_red,255);
-    }
-}
-
-draw_sprite_ext(SentryHUD,offset,xoffset+5, yoffset+455,2,2,0,c_white,1);
+draw_sprite_ext(SentryHUD,offset,xoffset+30, yoffset+490,2,2,0,c_white,1);
+draw_set_font(fnt_gg2big);
+draw_text_color(xoffset+75,yoffset+530,string(round(hp)),c_yellow,c_yellow,c_yellow,c_yellow,255);
+draw_set_font(fnt_gg2);
 }
 </argument>
       </arguments>

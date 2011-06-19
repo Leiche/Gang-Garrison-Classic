@@ -17,9 +17,14 @@
     team=TEAM_BLUE;
     if global.myself.class == CLASS_CIVILIAN {
         clearbuffer(global.sendBuffer);
-        ClientPlayerChangeclass(CLASS_SCOUT);
+        ClientPlayerChangeclass(CLASS_SNIPER);
         sendmessage(global.serverSocket, 0, 0, global.sendBuffer);
     }
+    if instance_exists(EscortTarget) {
+        clearbuffer(global.sendBuffer);
+        ClientPlayerChangeclass(CLASS_SNIPER);
+        sendmessage(global.serverSocket, 0, 0, global.sendBuffer);
+        }
     event_user(1);
 }
 </argument>

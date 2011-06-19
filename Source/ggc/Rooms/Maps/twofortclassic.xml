@@ -620,6 +620,54 @@ instance_create(0,0,TruefortO);</creationCode>
       <creationCode/>
       <locked>false</locked>
     </instance>
+    <instance>
+      <object>FlagCapBlue</object>
+      <position x="3192" y="444"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FlagCapBlue</object>
+      <position x="3174" y="444"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FlagCapBlue</object>
+      <position x="3192" y="402"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FlagCapBlue</object>
+      <position x="3174" y="402"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FlagCapBlue</object>
+      <position x="582" y="444"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FlagCapBlue</object>
+      <position x="582" y="402"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FlagCapBlue</object>
+      <position x="564" y="444"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FlagCapBlue</object>
+      <position x="564" y="402"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
   </instances>
   <tiles/>
   <editorSettings remember="false"/>

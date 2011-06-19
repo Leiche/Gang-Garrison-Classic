@@ -6,4 +6,6 @@
   <resource name="IntelligenceBaseRed" type="RESOURCE"/>
   <resource name="IntelligenceRed" type="RESOURCE"/>
   <resource name="IntelligenceBlue" type="RESOURCE"/>
+  <resource name="FlagCapRed" type="RESOURCE"/>
+  <resource name="FlagCapBlue" type="RESOURCE"/>
 </resources>

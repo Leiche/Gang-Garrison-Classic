@@ -13,8 +13,7 @@
       <not>false</not>
       <appliesTo>.self</appliesTo>
       <arguments>
-        <argument kind="STRING">
-    xoffset=-17;
+        <argument kind="STRING">    xoffset=-17;
     yoffset=-10;
     reloadTime=5;
     readyToShoot=true;
@@ -23,7 +22,8 @@
     shooting=false;
     rotating=false;
     nearestTarget= -1;
-    rotateindex=-1;</argument>
+    rotateindex=-1;
+</argument>
       </arguments>
     </action>
     <action id="604" library="1">

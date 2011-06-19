@@ -90,12 +90,21 @@ else {
 
 if mouse_check_button(mb_left) &amp;&amp; newteam !=-1 {
     if newteam==1 team = TEAM_SPECTATOR;
-    else if newteam==2 &amp;&amp; balance != TEAM_RED team = TEAM_RED;
-    else if newteam==3 &amp;&amp; balance != TEAM_BLUE team = TEAM_BLUE;     
-        if global.myself.class == CLASS_CIVILIAN {
+    else if newteam==2 &amp;&amp; balance != TEAM_RED   {
+         team = TEAM_RED;
+             if instance_exists(EscortTarget) {
+                clearbuffer(global.sendBuffer);
+                ClientPlayerChangeclass(CLASS_SOLDIER);
+                sendmessage(global.serverSocket, 0, 0, global.sendBuffer);
+                }
+    }
+    else if newteam==3 &amp;&amp; balance != TEAM_BLUE {
+    team = TEAM_BLUE;     
+         if instance_exists(EscortTarget) {
         clearbuffer(global.sendBuffer);
-        ClientPlayerChangeclass(CLASS_SCOUT);
+        ClientPlayerChangeclass(CLASS_SNIPER);
         sendmessage(global.serverSocket, 0, 0, global.sendBuffer);
+         }
     }
     else if newteam==0 { 
         if balance == TEAM_RED team = TEAM_BLUE;

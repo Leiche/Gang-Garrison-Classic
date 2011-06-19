@@ -19,6 +19,7 @@
     object = -1;
     team = TEAM_SPECTATOR;
     class = CLASS_SCOUT;
+    
     socket = -1;
     name = "";
     
@@ -49,6 +50,8 @@
     if instance_exists(ArenaHUD) {
         if ArenaHUD.roundStart == 0 canSpawn = 0;
     }
+    
+
     
     //Sentries for Engies
     //sentryBuilt = 0;

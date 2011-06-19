@@ -15,11 +15,14 @@
       <arguments>
         <argument kind="STRING">if(global.isHost) {
     if(team == TEAM_RED and intel == true) {
+        if !instance_exists(FlagCapRed) {
         sendEventScoreIntel(player);
         doEventScoreIntel(player);
         GameServer.syncTimer = 1;
+        }
     }
-}</argument>
+}
+</argument>
       </arguments>
     </action>
   </actions>

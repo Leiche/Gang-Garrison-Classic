@@ -699,6 +699,54 @@ instance_create(0,0,BadlandsO);
       <creationCode/>
       <locked>false</locked>
     </instance>
+    <instance>
+      <object>FlagCapBlue</object>
+      <position x="636" y="816"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FlagCapBlue</object>
+      <position x="636" y="774"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FlagCapBlue</object>
+      <position x="612" y="816"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FlagCapBlue</object>
+      <position x="612" y="774"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FlagCapBlue</object>
+      <position x="4146" y="816"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FlagCapBlue</object>
+      <position x="4146" y="774"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FlagCapBlue</object>
+      <position x="4128" y="816"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>FlagCapBlue</object>
+      <position x="4128" y="774"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
   </instances>
   <tiles/>
   <editorSettings remember="false"/>

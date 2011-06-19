@@ -9,6 +9,7 @@
   <resource name="ControlPointBlueS" type="RESOURCE"/>
   <resource name="ControlPointRedS" type="RESOURCE"/>
   <resource name="CaptureZoneS" type="RESOURCE"/>
+  <resource name="CapZoneS" type="RESOURCE"/>
   <resource name="IntelligenceRedS" type="RESOURCE"/>
   <resource name="IntelligenceBlueS" type="RESOURCE"/>
   <resource name="IntelligenceBaseS" type="RESOURCE"/>

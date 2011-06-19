@@ -15,7 +15,11 @@
       <arguments>
         <argument kind="STRING">if balance != TEAM_RED {
     team=TEAM_RED;
-    //civilianSwitchClass(team);
+        if instance_exists(EscortTarget) {
+        clearbuffer(global.sendBuffer);
+        ClientPlayerChangeclass(CLASS_SOLDIER);
+        sendmessage(global.serverSocket, 0, 0, global.sendBuffer);
+        }
     event_user(1);
 }
 </argument>

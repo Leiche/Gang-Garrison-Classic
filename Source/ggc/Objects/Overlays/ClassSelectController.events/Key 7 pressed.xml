@@ -13,7 +13,7 @@
       <not>false</not>
       <appliesTo>.self</appliesTo>
       <arguments>
-        <argument kind="STRING">{
+        <argument kind="STRING">/*{
     if instance_exists(EscortTarget) &amp;&amp; !instance_exists(Civilian) &amp;&amp;  !global.myself.team == TEAM_BLUE {
     class = CLASS_CIVILIAN;
     } else {
