@@ -225,18 +225,21 @@ global.launchMap = "";
                     ds_list_add(global.map_rotation, "ctf_badlands");
                 break;
                 case 4:
-                    ds_list_add(global.map_rotation, "cp_warpath");
+                    ds_list_add(global.map_rotation, "ctf_stonetwo");
                 break;
                 case 5:
-                    ds_list_add(global.map_rotation, "cp_shortcap"); 
+                    ds_list_add(global.map_rotation, "cp_warpath");
                 break;
                 case 6:
-                    ds_list_add(global.map_rotation, "hh_frontaldanger");
+                    ds_list_add(global.map_rotation, "cp_shortcap"); 
                 break;
                 case 7:
+                    ds_list_add(global.map_rotation, "hh_frontaldanger");
+                break;
+                case 8:
                     ds_list_add(global.map_rotation, "hh_portalescape");
                 break; 
-                case 8:
+                case 9:
                     ds_list_add(global.map_rotation, "fb_warehouse");
                 break; 
                     

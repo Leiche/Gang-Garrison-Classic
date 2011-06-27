@@ -148,18 +148,6 @@ instance_create(0,0,StonetwoO);
   </views>
   <instances>
     <instance>
-      <object>IntelligenceBaseRed</object>
-      <position x="900" y="846"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
-      <object>IntelligenceBaseBlue</object>
-      <position x="3660" y="846"/>
-      <creationCode/>
-      <locked>false</locked>
-    </instance>
-    <instance>
       <object>SpawnPointRed</object>
       <position x="282" y="492"/>
       <creationCode/>
@@ -360,6 +348,18 @@ instance_create(0,0,StonetwoO);
     <instance>
       <object>RedTeamGate</object>
       <position x="408" y="456"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>IntelligenceBaseBlue</object>
+      <position x="3654" y="846"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>IntelligenceBaseRed</object>
+      <position x="906" y="846"/>
       <creationCode/>
       <locked>false</locked>
     </instance>

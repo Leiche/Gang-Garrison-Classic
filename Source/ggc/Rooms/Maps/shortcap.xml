@@ -443,121 +443,133 @@ instance_create(0,0,ShortcapO);
     </instance>
     <instance>
       <object>genericSetupGate</object>
-      <position x="948" y="906"/>
+      <position x="966" y="804"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
       <object>genericSetupGate</object>
-      <position x="948" y="876"/>
+      <position x="966" y="834"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
       <object>genericSetupGate</object>
-      <position x="948" y="846"/>
+      <position x="966" y="864"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
       <object>genericSetupGate</object>
-      <position x="948" y="816"/>
+      <position x="966" y="894"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
       <object>genericSetupGate</object>
-      <position x="954" y="690"/>
+      <position x="966" y="924"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
       <object>genericSetupGate</object>
-      <position x="954" y="660"/>
+      <position x="966" y="774"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
       <object>genericSetupGate</object>
-      <position x="954" y="630"/>
+      <position x="966" y="744"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
       <object>genericSetupGate</object>
-      <position x="954" y="600"/>
+      <position x="966" y="714"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
       <object>genericSetupGate</object>
-      <position x="948" y="1188"/>
+      <position x="966" y="684"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
       <object>genericSetupGate</object>
-      <position x="948" y="1158"/>
+      <position x="966" y="654"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
       <object>genericSetupGate</object>
-      <position x="948" y="1128"/>
+      <position x="966" y="624"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
       <object>genericSetupGate</object>
-      <position x="2634" y="1188"/>
+      <position x="966" y="594"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
       <object>genericSetupGate</object>
-      <position x="2634" y="1158"/>
+      <position x="966" y="954"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
       <object>genericSetupGate</object>
-      <position x="2634" y="1128"/>
+      <position x="966" y="984"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
       <object>genericSetupGate</object>
-      <position x="2634" y="906"/>
+      <position x="966" y="1014"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
       <object>genericSetupGate</object>
-      <position x="2634" y="876"/>
+      <position x="966" y="1044"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
       <object>genericSetupGate</object>
-      <position x="2634" y="846"/>
+      <position x="966" y="1074"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
       <object>genericSetupGate</object>
-      <position x="2634" y="816"/>
+      <position x="966" y="1104"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
       <object>genericSetupGate</object>
-      <position x="2628" y="684"/>
+      <position x="966" y="1134"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
     <instance>
       <object>genericSetupGate</object>
-      <position x="2628" y="654"/>
+      <position x="966" y="1164"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>genericSetupGate</object>
+      <position x="966" y="1194"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>genericSetupGate</object>
+      <position x="2628" y="594"/>
       <creationCode/>
       <locked>false</locked>
     </instance>
@@ -569,7 +581,121 @@ instance_create(0,0,ShortcapO);
     </instance>
     <instance>
       <object>genericSetupGate</object>
-      <position x="2628" y="594"/>
+      <position x="2628" y="654"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>genericSetupGate</object>
+      <position x="2628" y="684"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>genericSetupGate</object>
+      <position x="2628" y="714"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>genericSetupGate</object>
+      <position x="2628" y="798"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>genericSetupGate</object>
+      <position x="2628" y="828"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>genericSetupGate</object>
+      <position x="2628" y="858"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>genericSetupGate</object>
+      <position x="2628" y="888"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>genericSetupGate</object>
+      <position x="2628" y="918"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>genericSetupGate</object>
+      <position x="2628" y="948"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>genericSetupGate</object>
+      <position x="2628" y="978"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>genericSetupGate</object>
+      <position x="2628" y="774"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>genericSetupGate</object>
+      <position x="2628" y="744"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>genericSetupGate</object>
+      <position x="2628" y="1008"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>genericSetupGate</object>
+      <position x="2628" y="1038"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>genericSetupGate</object>
+      <position x="2628" y="1068"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>genericSetupGate</object>
+      <position x="2628" y="1098"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>genericSetupGate</object>
+      <position x="2628" y="1128"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>genericSetupGate</object>
+      <position x="2628" y="1158"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>genericSetupGate</object>
+      <position x="2628" y="1188"/>
+      <creationCode/>
+      <locked>false</locked>
+    </instance>
+    <instance>
+      <object>genericSetupGate</object>
+      <position x="2628" y="1218"/>
       <creationCode/>
       <locked>false</locked>
     </instance>

@@ -25,7 +25,7 @@
     
     with (Character) {
         if (distance_to_object(other) &lt; other.blastRadius){
-            motion_add(point_direction(other.x,other.y,x,y),30-10*(distance_to_object(other)/other.blastRadius));
+            motion_add(point_direction(other.x,other.y,x,y),22*(distance_to_object(other)/other.blastRadius));
             if(other.team != team or id==other.ownerPlayer.object) &amp;&amp; hp &gt; 0 {
                 concussed = 1;
                 alarm[6] = 200;
@@ -36,7 +36,7 @@
                     concussed = 1;
                     alarm[6] = 200;
                     moveStatus = 4;
-                    motion_add(point_direction(other.x,other.y,x,y),30-5*(distance_to_object(other)/other.blastRadius));
+                    motion_add(point_direction(other.x,other.y,x,y),22*(distance_to_object(other)/other.blastRadius));
                 }
             }
             cloakAlpha = min(cloakAlpha + 0.2, 1);
