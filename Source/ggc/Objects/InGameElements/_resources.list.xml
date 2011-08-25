@@ -18,4 +18,5 @@
   <resource name="JoiningPlayer" type="RESOURCE"/>
   <resource name="Balancer" type="RESOURCE"/>
   <resource name="FakeProjectile" type="RESOURCE"/>
+  <resource name="camConcussion" type="RESOURCE"/>
 </resources>

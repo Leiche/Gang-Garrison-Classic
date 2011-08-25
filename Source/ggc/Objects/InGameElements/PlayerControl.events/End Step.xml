@@ -15,6 +15,8 @@
       <arguments>
         <argument kind="STRING">if(global.myself.object == -1) exit;
 
+
+// The view code :O!
 if object_is_ancestor(global.myself.object.object_index, Sniper) &amp;&amp; global.myself.object.zoomed == 1 {
     var relxmouse, relymouse;
     relxmouse = min(max(window_views_mouse_get_x()-view_xview[0], 0), view_wview);
@@ -22,6 +24,9 @@ if object_is_ancestor(global.myself.object.object_index, Sniper) &amp;&amp; glob
         
     view_xview[0] = global.myself.object.x+relxmouse-view_wview[0];
     view_yview[0] = global.myself.object.y+relymouse-view_hview[0];
+} else if global.myself.object.concussed == true &amp;&amp; global.myself.object.cam_Concussion != -1{
+    view_xview[0] = global.myself.object.cam_Concussion.x-view_wview[0]/2;
+    view_yview[0] = global.myself.object.cam_Concussion.y-view_hview[0]/2; 
 } else {
     view_xview[0] = global.myself.object.x-view_wview[0]/2;
     view_yview[0] = global.myself.object.y-view_hview[0]/2;

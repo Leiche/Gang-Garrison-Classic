@@ -28,12 +28,34 @@
             motion_add(point_direction(other.x,other.y,x,y),22*(distance_to_object(other)/other.blastRadius));
             if(other.team != team or id==other.ownerPlayer.object) &amp;&amp; hp &gt; 0 {
                 concussed = 1;
-                alarm[6] = 200;
                 hp -= other.explosionDamage*(1-(distance_to_object(other)/other.blastRadius));
                 lastDamageDealer = other.ownerPlayer;
                 lastDamageSource = other.weapon;
+                if alarm[6] &lt; 1 {
+                if id == global.myself.object {
+                    var cam_Concussion;
+                    global.myself.object.cam_Concussion =instance_create(x,y,camConcussion);
+                    global.myself.object.cam_Concussion.direction=0;
+                    global.myself.object.cam_Concussion.speed=0;
+                    global.myself.object.cam_Concussion.owner=id;
+                    global.myself.object.cam_Concussion.ownerPlayer=player;
+                    global.myself.object.cam_Concussion.alarm[0]=200;
+                    }
+                alarm[6] = 200;
+                }
                 if id==other.ownerPlayer.object and other.team == team {
                     concussed = 1;
+                    if alarm[6] &lt; 1 {
+                    if id == global.myself.object {
+                        var cam_Concussion;
+                        global.myself.object.cam_Concussion = instance_create(x,y,camConcussion);
+                        global.myself.object.cam_Concussion.direction=0;
+                        global.myself.object.cam_Concussion.speed=0;
+                        global.myself.object.cam_Concussion.owner=id;
+                        global.myself.object.cam_Concussion.ownerPlayer=player;
+                        global.myself.object.cam_Concussion.alarm[0]=200;
+                        }
+                    }
                     alarm[6] = 200;
                     moveStatus = 4;
                     motion_add(point_direction(other.x,other.y,x,y),22*(distance_to_object(other)/other.blastRadius));

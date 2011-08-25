@@ -31,12 +31,12 @@
     canthrowgrenade = true;
     newThrowtime = 25;
     tranquilized = false;
-    concussed = 0; //unused
-    concedDirection = 0; //unused
+    concussed = false; // not working right now.
     confused = false;
     confusetime = 0;
     tapped = 0;
     nadeTimer =0;
+    cam_Concussion = -1
     
     bubble = instance_create(0,0,SpeechBubbleO);
     bubble.owner = id;

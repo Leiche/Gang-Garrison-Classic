@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<event category="OTHER" id="15">
+<event category="COLLISION" with="FlagCapBlue">
   <actions>
     <action id="603" library="1">
       <!--action name: Code-->
@@ -13,26 +13,12 @@
       <not>false</not>
       <appliesTo>.self</appliesTo>
       <arguments>
-        <argument kind="STRING">{
-    if dontexplode &lt; 1 {
-    instance_destroy();
+        <argument kind="STRING">if(global.isHost) {
+    if(team == TEAM_BLUE and intel == true) {
+        sendEventScoreIntel(player);
+        doEventScoreIntel(player);
+        GameServer.syncTimer = 1;
     }
-    playsound(x,y,ChaingunSnd);
-    repeat(30) {
-    var shot;
-    shot = instance_create(x,y,Mpproj);
-    shot.direction=180-random(179);
-    shot.speed=9+random(1);
-    shot.owner=owner;
-    shot.ownerPlayer=ownerPlayer;
-    shot.team=team;
-    shot.burnDamage = 3;
-    shot.hitDamage = 3;
-    shot.weapon=WEAPON_GRENADE;
-    }
-    
-    dontexplode = dontexplode-1 ;
-    alarm[0]=50;
 }
 </argument>
       </arguments>

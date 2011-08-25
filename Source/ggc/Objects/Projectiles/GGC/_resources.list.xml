@@ -6,7 +6,6 @@
   <resource name="Laser" type="RESOURCE"/>
   <resource name="Flame" type="RESOURCE"/>
   <resource name="Gas" type="RESOURCE"/>
-  <resource name="Mpproj" type="RESOURCE"/>
   <resource name="Rocket" type="RESOURCE"/>
   <resource name="PipeBomb" type="RESOURCE"/>
   <resource name="grenades" type="GROUP"/>

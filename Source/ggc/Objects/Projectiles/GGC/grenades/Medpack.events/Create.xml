@@ -13,13 +13,14 @@
       <not>false</not>
       <appliesTo>.self</appliesTo>
       <arguments>
-        <argument kind="STRING">{
+        <argument kind="STRING">{  
+    drawCircle = false;
     characterHit = -1;
     damage = 1
+    blastRadius = 64;
     bounced = false;
     rotspeed=0;
-    dontexplode = 3
-   //alarm[0]=150;
+    alarm[0]=60;
 }
 </argument>
       </arguments>

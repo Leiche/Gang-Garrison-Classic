@@ -22,5 +22,4 @@
   <resource name="AirBlastMaskS" type="RESOURCE"/>
   <resource name="PipeBombS" type="RESOURCE"/>
   <resource name="TranqS" type="RESOURCE"/>
-  <resource name="mpprojS" type="RESOURCE"/>
 </resources>

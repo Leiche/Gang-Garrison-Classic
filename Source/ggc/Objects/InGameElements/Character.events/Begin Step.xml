@@ -103,7 +103,10 @@ if (confused == true &amp;&amp; id = global.myself.object) { // If confused and 
         }
     }
 }
-
+/*
+if (concussed == true &amp;&amp; id = global.myself.object) {
+}
+*/
 if (releasedKeys &amp; $01) &amp;&amp; canthrowgrenade == true &amp;&amp; Grenades!=0 &amp;&amp; tapped == 0 {
         tapped = 2
         }

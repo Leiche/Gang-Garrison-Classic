@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<event category="STEP" id="1">
+  <actions>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">if owner.hp &gt; 1 {
+if distance_to_object(owner) &gt; 160{//
+
+    if speed &lt; 15 {speed += 0.9 } else {speed -= 0.9 }
+move_towards_point(owner.x,owner.y,speed)
+
+} else if distance_to_object(owner) &gt; 128 {
+
+    if speed &lt; 12 {speed += 0.8 } else {speed -= 0.8 }
+move_towards_point(owner.x,owner.y,speed)
+
+} else if distance_to_object(owner) &gt; 96 {
+
+    if speed &lt; 9 {speed += 0.7 } else {speed -= 0.7 }
+move_towards_point(owner.x,owner.y,speed)
+
+} else if distance_to_object(owner) &gt; 64 {
+
+    if speed &lt; 6 {speed += 0.5 } else {speed -= 0.5 }
+move_towards_point(owner.x,owner.y,speed)
+
+} else if distance_to_object(owner) &gt; 24 {
+
+    if speed &lt; 3 {speed += 0.3 } else {speed -= 0.3 }
+        if owner.hspeed !=0 {
+            move_towards_point(owner.x,owner.y,speed)
+        }
+
+} else {
+
+    if speed &lt; 0 {speed -= 0.1 } else {speed += 0.1 }
+
+}
+}
+
+if (alarm[0] &lt; 1 || owner.hp &lt; 1){
+instance_destroy();
+}
+</argument>
+      </arguments>
+    </action>
+  </actions>
+</event>

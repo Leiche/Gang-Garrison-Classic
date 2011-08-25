@@ -25,6 +25,7 @@
   <resource name="CapLimitMenuS" type="RESOURCE"/>
   <resource name="Scoreboard" type="RESOURCE"/>
   <resource name="BuildMenuS" type="RESOURCE"/>
+  <resource name="sprite217" type="RESOURCE"/>
   <resource name="TeamDoorS" type="RESOURCE"/>
   <resource name="TVLightUpS" type="RESOURCE"/>
   <resource name="DoorTopLightUpS" type="RESOURCE"/>
